@@ -14,14 +14,13 @@ namespace LSC
 {
     public class LSCProgram
     {
-        private static readonly string token;
         private static Client _restClient;
         private static readonly List<List<int>> categoryMagazines = new List<List<int>>();
         public static async Task Main(string[] args)
         {
             Initialization();
             LSCService lscService = new LSCService();
-            var token = await lscService.GetToken();
+            string token = await lscService.GetToken();
             var categories = await lscService.GetCategories(token);
 
             // This part is independent. This is where to get the extra points.
@@ -60,7 +59,7 @@ namespace LSC
                 }
             }
 
-            var result = await lscService.PostAnswer(token, subscribedToAllCategories);
+            var result = await lscService.PostResult(token, subscribedToAllCategories);
         }
 
         public static void Initialization()

@@ -46,7 +46,7 @@ namespace LSCProgram.Services
                 return apiResponse.Data;
             }
         }
-        public async Task<AnswerResponse> PostAnswer(string token, List<string> content)
+        public async Task<AnswerResponse> PostResult(string token, List<string> content)
         {
             var contentObject = new Dictionary<string, List<string>>
             {
