@@ -60,6 +60,9 @@ namespace LSC
             }
 
             var result = await lscService.PostResult(token, subscribedToAllCategories);
+
+            Console.WriteLine(result.TotalTime);
+            Console.WriteLine(result.AnswerCorrect);
         }
 
         public static void Initialization()
