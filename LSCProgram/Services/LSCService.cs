@@ -1,6 +1,5 @@
 ﻿using LSCProgram.RESTClient;
 using LSC.Models;
-using System.Net.Http;
 using Newtonsoft.Json;
 using System.Text;
 
